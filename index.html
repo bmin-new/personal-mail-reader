@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Personal Mail Reader</title>
+<style>
+  :root { --bg: #fbfaf7; --text: #1f1d1a; --muted: #5f5a52; --rule: #e4e0d8; --link: #2f5d8a; --code: #f0ede6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #171615; --text: #ece9e3; --muted: #a8a29a; --rule: #2e2c29; --link: #8fb5dc; --code: #24221f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 20px; padding-bottom: 14px; margin-bottom: 32px;
+        border-bottom: 1px solid var(--rule); font-size: 0.95rem; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 8px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 8px; }
+  a { color: var(--link); }
+  code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; overflow-wrap: anywhere; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.875rem; }
+</style>
+</head>
+<body>
+<main>
+  <nav><a href="./">Home</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a></nav>
+
+  <h1>Personal Mail Reader</h1>
+  <p class="lede">A private, single-user tool that lets its owner ask an AI assistant to search and read the owner's own Gmail, with read-only access.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>It runs only on its owner's computer, as a local extension (an MCP server) for Claude Code, Anthropic's AI assistant.</li>
+    <li>When the owner asks, it searches and reads messages in Gmail accounts the owner has linked, and saves an attachment to the owner's computer if the owner requests it.</li>
+    <li>It asks Google for one permission: read-only Gmail access (<code>gmail.readonly</code>). It cannot send, delete or change email, labels or settings.</li>
+  </ul>
+
+  <h2>Who it is for</h2>
+  <p>Only its owner. It is not offered to the public and there is nothing to sign up for. If you are not the owner, please don't authorize it.</p>
+
+  <h2>Your data</h2>
+  <p>The <a href="privacy.html">privacy policy</a> explains how Google user data is accessed, used, stored and shared. Use is governed by the <a href="terms.html">terms of service</a>.</p>
+
+  <footer>
+    Questions: <a href="https://github.com/bmin-new/personal-mail-reader/issues">open an issue on GitHub</a>.<br>
+    Not affiliated with, endorsed by or sponsored by Google or Anthropic. Gmail is a trademark of Google LLC; Claude is a trademark of Anthropic, PBC.
+  </footer>
+</main>
+</body>
+</html>
